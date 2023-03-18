@@ -11,7 +11,7 @@ err = 1 ;
 iteration = 0 ;
 while err > eps    
 x1 = x0 - (f(x0) / df(x0))
-err = abs((x1-x0)/x0)
+err = abs((x1-x0)/x1)
 x0=x1 ;
 iteration = iteration +1 
 end
