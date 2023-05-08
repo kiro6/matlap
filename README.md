@@ -1,1 +1,3 @@
-# numerical-computation-nonlinear-equation-algorithms using matlap
+# numerical-computation-algorithms using matlap
+
+## - nonlinear-equation
