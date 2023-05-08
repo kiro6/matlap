@@ -1,3 +1,4 @@
 # numerical-computation-algorithms using matlap
 
-## - nonlinear-equation
+## - nonlinear equation solving algorithms
+## - curve fitting algorithms
