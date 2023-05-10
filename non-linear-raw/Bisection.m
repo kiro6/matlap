@@ -1,11 +1,13 @@
 
-a = 1  
-b = 2   
+a = 0  ;
+b = 1   ;
 eps = 1e-4 ;
-fs = 'x^3+4*x^2-10' ;
+
+fs = '3*(x^2) - exp(x)' ;
 f = str2func(['@(x)' fs]) ;
 
 c = (a+b)/2 
+disp('f(c)');disp(f(c));
 iteration  = 1 
 
 while abs(f(c)) > eps
@@ -15,6 +17,6 @@ while abs(f(c)) > eps
        b=c ;
    end
  c=(a+b)/2 
- f(c)
+ disp('f(c)');disp(f(c));
  iteration = iteration +1    
 end
