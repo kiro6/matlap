@@ -1,17 +1,22 @@
-expr_str = 'x^3+4*x^2-10' ;
-f = str2func(['@(x)' expr_str]) ; 
+x0 = -0.4 ;
+eps = 1e-4 ; 
+err = 1 ; 
+iteration =0 ; 
 
-expr_symp = str2sym(expr_str) 
-expr_symp_diff = diff(expr_symp) 
-df = matlabFunction(expr_symp_diff) ;
+fs = 'sin(x) - ( (x+1) / (x-1) )' ;
+f = str2func(['@(x)' fs]) ; 
 
-x0 = 1 ;
-eps  = 1e-4 ;
-err = 1 ;
-iteration = 0 ;
-while err > eps    
-x1 = x0 - (f(x0) / df(x0))
-err = abs((x1-x0)/x1)
-x0=x1 ;
-iteration = iteration +1 
+
+f_symp = str2sym(fs) 
+f_symp_diff = diff(f_symp)  
+df = matlabFunction(f_symp_diff); 
+
+
+while err > eps
+    x1 = x0 - ( f(x0) / df(x0) );
+    err = abs( (x1 -x0) / x1 ) ;
+    disp("x1 = " +x1);
+    disp("err = "+err*100 + "%");
+    x0 = x1 ; 
+    iteration =iteration +1
 end

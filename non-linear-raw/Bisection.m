@@ -7,7 +7,7 @@ fs = '3*(x^2) - exp(x)' ;
 f = str2func(['@(x)' fs]) ;
 
 c = (a+b)/2 
-disp('f(c)');disp(f(c));
+disp("f(c) = " + f(c));
 iteration  = 1 
 
 while abs(f(c)) > eps
@@ -17,6 +17,6 @@ while abs(f(c)) > eps
        b=c ;
    end
  c=(a+b)/2 
- disp('f(c)');disp(f(c));
+ disp("f(c) = " + f(c));
  iteration = iteration +1    
 end
