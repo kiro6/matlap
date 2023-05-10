@@ -37,10 +37,10 @@ st = sum( (y-yav).^2 )  ;
 sr = sum((y-a0-a1*x-a2*x.^2).^2) ;
 r2=(st-sr)/st ;
 
-disp('a0');disp(a0) ;
-disp('a1');disp(a1) ;
-disp('a2');disp(a2) ;
-disp('r^2 ');disp(r2) ;
+disp("a0 = "+a0) ;
+disp("a1 = "+a1) ;
+disp("a2 = "+a2) ;
+disp("r^2 = "+r2) ;
 
 x1 = min(x):0.1:max(x) ;
 %y= a0 + a1*x + a2*x^2

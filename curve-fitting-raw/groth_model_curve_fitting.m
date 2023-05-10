@@ -45,9 +45,9 @@ sr = sum((Y-B-A*X).^2) ;
 r2=(st-sr)/st ;
 
 
-disp('a ');disp(a) ;
-disp('b ');disp(b) ;
-disp('r^2 ');disp(r2) ;
+disp("a = "+a) ;
+disp("b = "+b) ;
+disp("r^2 = "+r2) ;
 
 x1 = min(x):0.1:max(x) ;
 %y= ax / b+X

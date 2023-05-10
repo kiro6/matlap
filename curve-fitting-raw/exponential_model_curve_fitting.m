@@ -34,7 +34,7 @@ sol = Rightcoef \ Leftcoef  ; % as same as 'sol  = Rightcoef^-1 * Leftcoef' but 
 
 a = sol(1) ; %a
 B = sol(2) ; %B
-b = exp(sol(2)) ; %b 
+b = exp(B) ; %b 
 
 %calc R^2
 yav = mean(Y) ;
@@ -43,9 +43,9 @@ sr = sum((Y-B-a*x).^2) ;
 r2=(st-sr)/st ;
 
 
-disp('a ');disp(a) ;
-disp('b ');disp(b) ;
-disp('r^2 ');disp(r2) ;
+disp("a = "+a) ;
+disp("b = "+b) ;
+disp("r^2 = "+r2) ;
 
 x1 = min(x):0.1:max(x) ;
 %y=b*e^ax
